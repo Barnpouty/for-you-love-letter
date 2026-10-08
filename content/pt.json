@@ -1,0 +1,493 @@
+{
+  "html_lang": "pt",
+  "og_locale": "pt_PT",
+  "language_name": "Português",
+  "language_short": "PT",
+  "meta": {
+    "title": "For You — Cartas de amor para cada momento",
+    "description": "Dezasseis cartas “abre quando” para os dias tristes, os dias pesados, os dias de esperança e todos os outros. Uma coleção digital para oferecer a quem amas.",
+    "og_title": "For You — uma coleção de cartas de amor",
+    "og_description": "Cartas para os dias em que alguém precisa de se sentir amado, compreendido e lembrado de que não está só."
+  },
+  "nav": {
+    "skip": "Saltar para o conteúdo",
+    "home": "For You, página inicial",
+    "letters": "As cartas",
+    "inside": "O livro por dentro",
+    "faith": "Fé",
+    "cta": "Quero as cartas",
+    "language": "Escolher idioma"
+  },
+  "hero": {
+    "kicker": "Uma coleção de cartas de amor",
+    "title_lines": [
+      "Há coisas que",
+      "se dizem melhor",
+      "quando ficam",
+      "escritas."
+    ],
+    "lede": "Dezasseis cartas para os dias calmos, os dias pesados, os dias de esperança e todos os que ficam pelo meio. Escritas para que quem amas nunca tenha de os enfrentar sem ninguém.",
+    "cta_primary": "Quero as cartas de amor",
+    "cta_note": "PDF digital em português. Segue para o pagamento seguro.",
+    "cta_secondary": "Explorar as cartas",
+    "scene_label": "Duas figuras ilustradas. Uma segura um molho de cartas atado com uma fita e alfazema, e oferece-o à outra."
+  },
+  "intro": {
+    "statement": "Este não é um livro para ler do princípio ao fim. É uma coleção de cartas à espera do momento certo.",
+    "body": "Quando um sentimento chega, abres a carta escrita para ele. Há dias em que vais precisar de mais do que uma. Não faz mal. Não há ordem certa nem errada.",
+    "aside": "E se me quiseres ao teu lado… eu estou aqui.",
+    "aside_source": "De “Como usar este livro”",
+    "img_alt": "Um pequeno maço de cartas atado com uma fita verde e um raminho de alfazema"
+  },
+  "moments": {
+    "title": "De que precisa o teu coração hoje?",
+    "lede": "Escolhe o sentimento mais parecido com o teu. Uma carta vai encontrar-te.",
+    "menu_label": "Sentimentos",
+    "envelope_front": "Para o momento em que estás",
+    "envelope_hint": "Escolhe um sentimento e uma carta vai encontrar-te.",
+    "after": "Há palavras que chegam exatamente no momento certo.",
+    "cta": "Quero a coleção completa",
+    "cta_note": "As 16 cartas, completas, num só PDF para guardar.",
+    "scene_label": "As duas figuras reagem à carta que abres."
+  },
+  "moods": [
+    {
+      "id": "sad",
+      "label": "Estou triste",
+      "letter": 1
+    },
+    {
+      "id": "overwhelmed",
+      "label": "Está tudo a ser demais",
+      "letter": 2
+    },
+    {
+      "id": "hug",
+      "label": "Preciso de um abraço",
+      "letter": 3
+    },
+    {
+      "id": "hope",
+      "label": "Preciso de esperança",
+      "letter": 4
+    },
+    {
+      "id": "alone",
+      "label": "Sinto-me só",
+      "letter": 5
+    },
+    {
+      "id": "loved",
+      "label": "Só preciso de sentir o teu amor",
+      "letter": 6
+    },
+    {
+      "id": "heavy",
+      "label": "O dia está pesado",
+      "letter": 7
+    },
+    {
+      "id": "strength",
+      "label": "Preciso de força",
+      "letter": 8
+    },
+    {
+      "id": "miss",
+      "label": "Tenho saudades tuas",
+      "letter": 9
+    },
+    {
+      "id": "reconnect",
+      "label": "Precisamos de nos reencontrar",
+      "letter": 10
+    },
+    {
+      "id": "good",
+      "label": "Aconteceu algo bom",
+      "letter": 11
+    },
+    {
+      "id": "doubt",
+      "label": "Estou a duvidar de mim",
+      "letter": 15
+    },
+    {
+      "id": "morning",
+      "label": "Começou um novo dia",
+      "letter": 13
+    },
+    {
+      "id": "night",
+      "label": "É tarde e a cabeça não para",
+      "letter": 14
+    }
+  ],
+  "wall": {
+    "title": "Abre quando…",
+    "lede": "Dezasseis envelopes, cada um escrito para um tipo de dia. Abre um para leres como começa.",
+    "list_label": "As dezasseis cartas"
+  },
+  "ui": {
+    "letter": "Carta",
+    "close": "Fechar",
+    "prev": "Carta anterior",
+    "next": "Carta seguinte",
+    "glimpse": "Isto é só um vislumbre. A carta completa está à tua espera na coleção.",
+    "cta": "Quero a coleção completa",
+    "open_letter": "Abrir carta"
+  },
+  "letters": [
+    {
+      "n": 1,
+      "image": "l01",
+      "page": 5,
+      "atmosphere": "quiet",
+      "pose": "comfort",
+      "title": "Abre quando estiveres triste",
+      "wall_prefix": "Abre quando",
+      "wall_label": "estiveres triste",
+      "epigraph": "Tens todo o direito de estar triste. E o meu amor por ti não muda nada.",
+      "line": "Não posso prometer que resolvo já o que te está a magoar. Mas posso prometer que não vais passar por isso sem mim.",
+      "label": "Para guardar perto",
+      "quote": "Não te vou apressar a sentires-te melhor. Vou simplesmente ficar.",
+      "closing": "Anda cá.",
+      "img_alt": "Duas mãos a segurar uma caneca quente pintada"
+    },
+    {
+      "n": 2,
+      "image": "l02",
+      "page": 6,
+      "atmosphere": "calm",
+      "pose": "comfort",
+      "title": "Abre quando tudo parecer demais",
+      "wall_prefix": "Abre quando",
+      "wall_label": "tudo parecer demais",
+      "epigraph": "Para um segundo. Inspira. Expira.",
+      "line": "Não tens de resolver tudo esta noite. Só a próxima coisa pequena.",
+      "label": "Respira",
+      "quote": "Pousa uma coisa. Só uma. O mundo pode esperar enquanto recuperas o fôlego.",
+      "closing": "Conta comigo.",
+      "img_alt": "Um copo de água ao lado de um raminho de alecrim"
+    },
+    {
+      "n": 3,
+      "image": "l03",
+      "page": 7,
+      "atmosphere": "warm",
+      "pose": "embrace",
+      "title": "Abre quando precisares de um abraço",
+      "wall_prefix": "Abre quando",
+      "wall_label": "precisares de um abraço",
+      "epigraph": "Considera esta carta um abraço feito de palavras.",
+      "line": "Não é a mesma coisa, por isso esta carta também é um vale: um abraço verdadeiro, válido a qualquer hora, sem prazo e sem perguntas.",
+      "label": "Vale",
+      "quote": "Um abraço verdadeiro. Válido a qualquer hora, sem prazo, sem perguntas.",
+      "closing": "Anda cá. Agora mesmo.",
+      "img_alt": "Uma manta de malha dobrada"
+    },
+    {
+      "n": 4,
+      "image": "l04",
+      "page": 8,
+      "atmosphere": "warm",
+      "pose": "uplift",
+      "title": "Abre quando precisares de esperança",
+      "wall_prefix": "Abre quando",
+      "wall_label": "precisares de esperança",
+      "epigraph": "O sol não pede licença para nascer de manhã. Simplesmente nasce.",
+      "line": "Lembra-te de tudo o que Deus já te ajudou a atravessar. Esta não é a primeira fase difícil que enfrentas — e olha, continuas aqui.",
+      "label": "Verdade",
+      "quote": "Esta fase vai passar. As fases passam sempre. A manhã está a chegar.",
+      "closing": "Cabeça erguida. A manhã está a chegar.",
+      "img_alt": "Um pequeno rebento verde a nascer da terra"
+    },
+    {
+      "n": 5,
+      "image": "l05",
+      "page": 9,
+      "atmosphere": "quiet",
+      "pose": "embrace",
+      "title": "Abre quando te sentires só",
+      "wall_prefix": "Abre quando",
+      "wall_label": "te sentires só",
+      "epigraph": "Tens alguém que te escolhe de propósito — todos os dias, em todas as fases.",
+      "line": "A solidão sabe mentir. Diz-te que ninguém ia entender, que és demasiado, que pedir ajuda é pesar a alguém.",
+      "label": "Promessa",
+      "quote": "Manda-me só um ponto, se for tudo o que consegues. Eu vou saber o que quer dizer.",
+      "closing": "Chega-te perto.",
+      "img_alt": "Duas canecas de cerâmica lado a lado"
+    },
+    {
+      "n": 6,
+      "image": "l06",
+      "page": 10,
+      "atmosphere": "romantic",
+      "pose": "joy",
+      "title": "Abre quando precisares de lembrar que te amo",
+      "wall_prefix": "Abre quando",
+      "wall_label": "precisares de lembrar que te amo",
+      "epigraph": "O meu amor não é só para os dias de sol. Fica. Escolhe. Permanece.",
+      "line": "Amo-te. Não só nos dias fáceis, quando te ris e está tudo bem. Também nos dias pesados. Sobretudo nesses.",
+      "label": "Para sempre",
+      "quote": "Amo-te. Lê outra vez, se precisares. Continua a ser verdade.",
+      "closing": "Sempre. Ainda. Por inteiro.",
+      "img_alt": "Um pequeno ramo de rosas bravas e folhas de oliveira"
+    },
+    {
+      "n": 7,
+      "image": "l07",
+      "page": 11,
+      "atmosphere": "quiet",
+      "pose": "comfort",
+      "title": "Abre quando o dia pesar",
+      "wall_prefix": "Abre quando",
+      "wall_label": "o dia pesar",
+      "epigraph": "Este momento não define a tua história inteira. É um capítulo difícil.",
+      "line": "Deus dá as batalhas mais duras aos Seus soldados mais fortes — mas até os soldados fortes precisam de descanso, de ânimo, de alguém ao seu lado.",
+      "label": "Descanso",
+      "quote": "Não tens de ser forte a cada segundo. Podes descansar. Podes chorar. Podes ficar em silêncio.",
+      "closing": "A batalha é difícil. Mas a fraqueza não é tua.",
+      "img_alt": "Uma taça de barro com pedras de rio e folhas de oliveira"
+    },
+    {
+      "n": 8,
+      "image": "l08",
+      "page": 12,
+      "atmosphere": "warm",
+      "pose": "uplift",
+      "title": "Abre quando precisares de força",
+      "wall_prefix": "Abre quando",
+      "wall_label": "precisares de força",
+      "epigraph": "Ser forte não é nunca sentir cansaço. É continuar, mesmo quando ele chega.",
+      "line": "Já atravessaste o fogo antes e saíste de pé. Vais voltar a fazê-lo.",
+      "label": "Coragem",
+      "quote": "Respira mais uma vez. Dá o próximo passo. Isso chega.",
+      "closing": "Tenho orgulho em ti por continuares. A sério.",
+      "img_alt": "Uma pequena lamparina de barro acesa"
+    },
+    {
+      "n": 9,
+      "image": "l09",
+      "page": 13,
+      "atmosphere": "romantic",
+      "pose": "embrace",
+      "title": "Abre quando sentires a minha falta",
+      "wall_prefix": "Abre quando",
+      "wall_label": "sentires a minha falta",
+      "epigraph": "Levo-te comigo. Nos momentos comuns. Nos silenciosos também.",
+      "line": "Quando acontece algo bom, quero contar-te primeiro. Quando algo difícil chega, queria-te perto o suficiente para te abraçar.",
+      "label": "Perto ou longe",
+      "quote": "Conta-me o teu dia, até as partes aborrecidas. Quero tudo.",
+      "closing": "A contar os dias até estar perto outra vez.",
+      "img_alt": "Uma bússola de latão pousada sobre um mapa antigo"
+    },
+    {
+      "n": 10,
+      "image": "l10",
+      "page": 14,
+      "atmosphere": "romantic",
+      "pose": "reading",
+      "title": "Abre quando precisarmos de nos reencontrar",
+      "wall_prefix": "Abre quando",
+      "wall_label": "precisarmos de nos reencontrar",
+      "epigraph": "Nós contra o problema. Não eu contra ti.",
+      "line": "Quando algo te magoar, fala comigo. Quando precisares de espaço, vou respeitar. Quando precisares de colo, vou dar-to.",
+      "label": "Parceiros",
+      "quote": "Não quero ganhar contra ti. Quero que ganhemos juntos.",
+      "closing": "Estou do teu lado. Sempre estive.",
+      "img_alt": "Uma mesa de madeira com duas cadeiras frente a frente"
+    },
+    {
+      "n": 11,
+      "image": "l11",
+      "page": 15,
+      "atmosphere": "bright",
+      "pose": "joy",
+      "title": "Abre quando acontecer algo bom",
+      "wall_prefix": "Abre quando",
+      "wall_label": "acontecer algo bom",
+      "epigraph": "A tua alegria não é ruído de fundo para mim — é algo a que presto atenção.",
+      "line": "Estou a torcer por ti na primeira fila. Sempre. Isto é lindo. E tu também.",
+      "label": "Celebra",
+      "quote": "Os bons momentos podem ser simplesmente bons. Deixa-te aproveitar.",
+      "closing": "A celebrar-te. Sempre.",
+      "img_alt": "Uma taça pintada com figos e cerejas"
+    },
+    {
+      "n": 12,
+      "image": "l12",
+      "page": 16,
+      "atmosphere": "romantic",
+      "pose": "joy",
+      "title": "Abre só porque sim",
+      "wall_prefix": "Abre",
+      "wall_label": "só porque sim",
+      "epigraph": "Não precisas de um motivo para receber amor. Não precisas de merecer a minha ternura.",
+      "line": "Sem crise. Sem ocasião especial. Só isto: estava a pensar em ti.",
+      "label": "Verdade simples",
+      "quote": "Ainda bem que existes. Ainda bem que posso amar-te. É só isto. E chega.",
+      "closing": "Só porque sim. Sempre porque sim.",
+      "img_alt": "Um raminho de flores brancas"
+    },
+    {
+      "n": 13,
+      "image": "l13",
+      "page": 17,
+      "atmosphere": "morning",
+      "pose": "uplift",
+      "title": "Uma nota para a tua manhã",
+      "wall_prefix": "",
+      "wall_label": "uma nota para a manhã",
+      "epigraph": "Começas este dia com o meu amor. Nada vai mudar isso.",
+      "line": "Deus já vai à tua frente neste dia. Ele sabe o que o dia traz, e não se esqueceu de ti nem por um segundo.",
+      "label": "Começo suave",
+      "quote": "Bebe um pouco de água. Respira devagar. Uma coisa de cada vez também é progresso.",
+      "closing": "Tem uma manhã tranquila. Estou contigo.",
+      "img_alt": "Um jarro de cerâmica, um copo de água e meio limão num tabuleiro"
+    },
+    {
+      "n": 14,
+      "image": "l14",
+      "page": 18,
+      "atmosphere": "night",
+      "pose": "calm",
+      "title": "Uma nota para a tua noite",
+      "wall_prefix": "",
+      "wall_label": "uma nota para a noite",
+      "epigraph": "O que quer que este dia tenha trazido, não tens de o levar todo contigo para o sono.",
+      "line": "O dia está a acabar. Conseguiste.",
+      "label": "Descanso",
+      "quote": "Descansar não é desistir. Podes parar. Pousa isso.",
+      "closing": "Boa noite. Estou aqui.",
+      "img_alt": "Uma vela acesa ao lado de um diário de couro"
+    },
+    {
+      "n": 15,
+      "image": "l15",
+      "page": 19,
+      "atmosphere": "calm",
+      "pose": "uplift",
+      "title": "Abre quando duvidares de ti",
+      "wall_prefix": "Abre quando",
+      "wall_label": "duvidares de ti",
+      "epigraph": "Eu vejo-te com mais clareza do que a dúvida.",
+      "line": "Não ficaste para trás. Não estás a falhar. Estás a crescer — e crescer raramente é arrumado ou em linha reta.",
+      "label": "Lembra-te",
+      "quote": "Confia mais nas provas da tua própria vida do que nas acusações de um dia difícil.",
+      "closing": "Eu vejo-te. Eu escolho-te. Ainda.",
+      "img_alt": "Um espelho de mão antigo com folhas verdes"
+    },
+    {
+      "n": 16,
+      "image": "l16",
+      "page": 20,
+      "atmosphere": "faith",
+      "pose": "calm",
+      "title": "Uma oração por nós & palavras finais",
+      "wall_prefix": "",
+      "wall_label": "uma oração por nós",
+      "epigraph": "Se te lembrares só de uma coisa: não estás só.",
+      "line": "Mantém a cabeça erguida. Continua a confiar em Deus. E quando a vida pesar… vem ter comigo.",
+      "label": "Uma oração por nós",
+      "quote": "Lembra-a de que não tem de carregar tudo sozinha. Protege o seu coração. Guia os seus passos.",
+      "closing": "Nós contra o problema. Sempre. Estou aqui.",
+      "img_alt": "Duas mãos pousadas suavemente uma sobre a outra"
+    }
+  ],
+  "product": {
+    "title": "For You",
+    "subtitle": "Uma coleção de cartas de amor para cada momento",
+    "body": "Um PDF para guardar, com dezasseis cartas, uma dedicatória e uma oração final, paginado como um livro escrito à mão e ilustrado com pequenos objetos pintados: uma caneca quente, um copo de água, uma vela para a noite.",
+    "facts": [
+      {
+        "term": "Formato",
+        "detail": "PDF digital, 20 páginas ilustradas"
+      },
+      {
+        "term": "Conteúdo",
+        "detail": "16 cartas, uma dedicatória e uma oração final"
+      },
+      {
+        "term": "Idioma",
+        "detail": "Português"
+      },
+      {
+        "term": "Como ler",
+        "detail": "No telemóvel ou tablet, ou impresso e guardado perto"
+      }
+    ],
+    "cta": "Quero as cartas de amor",
+    "cta_note": "Segues para o pagamento seguro para concluir a compra.",
+    "contents_title": "Índice",
+    "contents_lede": "Vai diretamente à carta que combina com o teu coração hoje.",
+    "page_label": "página",
+    "mockup_alt": "A capa de For You: uma pintura de um livro aberto, alfazema num jarro de barro e uma chávena de chá",
+    "preview_alts": [
+      "A página de índice com as dezasseis cartas",
+      "A primeira página da carta para os dias tristes, parcialmente desfocada"
+    ]
+  },
+  "value": {
+    "title": "Algo a que se volta",
+    "lede": "Um presente que não é só para um dia. Fica à espera do dia que vier.",
+    "list_label": "Para voltar a ele quando",
+    "moments": [
+      "faltar segurança",
+      "tudo parecer demasiado",
+      "a saudade apertar",
+      "faltar ânimo",
+      "fizer falta sentir amor",
+      "a esperança estiver a acabar",
+      "fizer falta um pouco de conforto",
+      "precisarem de se reencontrar",
+      "algo bom merecer ser celebrado",
+      "fizer falta lembrar que ninguém está só"
+    ],
+    "give_title": "Para oferecer",
+    "give_body": "A quem carrega tanto e ainda arranja espaço para ti. Para quem está longe, para quem atravessa uma fase difícil, ou para quem simplesmente queres lembrar que é escolhido todos os dias.",
+    "keep_title": "Para guardar",
+    "keep_body": "Para ti, para as noites em que precisas de ler que descansar não é desistir, e para as manhãs em que precisas de começar o dia já com amor.",
+    "img_alt": "Pintura de um livro aberto, um jarro de barro com alfazema e uma chávena de chá numa mesa de madeira"
+  },
+  "faith": {
+    "label": "Uma oração por nós",
+    "title": "Continua a confiar em Deus.",
+    "body": "A fé atravessa estas páginas com discrição. Não como um sermão, mas como vive dentro de uma relação: lembrar tudo o que já atravessaram juntos e orar um pelo outro.",
+    "quote": "Ele continua a trabalhar, mesmo quando não consegues ver o que está a fazer.",
+    "quote_source": "Abre quando precisares de esperança",
+    "prayer": [
+      "Dá-lhe paz quando a mente dela estiver sobrecarregada.",
+      "Lembra-a de que não tem de carregar tudo sozinha.",
+      "Protege o seu coração. Guia os seus passos."
+    ],
+    "amen": "Ámen.",
+    "img_alt": "Duas mãos pousadas uma sobre a outra"
+  },
+  "testimonials": {
+    "title": "De quem já leu",
+    "items": []
+  },
+  "final": {
+    "title": "Guarda as palavras perto.",
+    "lede": "Para os dias em que precisam de as ouvir, e para os dias em que nem sabem que precisam.",
+    "remember": "Não estás só. Cabeça erguida. E quando a vida pesar, chega-te perto.",
+    "cta": "Quero as cartas de amor",
+    "cta_note": "PDF digital em português. Segue para o pagamento seguro.",
+    "scene_label": "As duas figuras caminham uma para a outra e abraçam-se."
+  },
+  "sticky": {
+    "text": "16 cartas de amor num só PDF",
+    "cta": "Quero as cartas"
+  },
+  "footer": {
+    "tagline": "A tua saúde mental importa.",
+    "note": "Estas cartas são palavras de amor e encorajamento. Não são terapia nem substituem acompanhamento profissional. Se tu ou alguém que amas está a passar por dificuldades, procura um profissional qualificado ou os serviços de apoio da tua zona.",
+    "rights": "Todos os direitos reservados.",
+    "language": "Ler esta página em"
+  },
+  "notfound": {
+    "title": "Esta página não está aqui.",
+    "body": "A carta que procuras está noutro lugar.",
+    "back": "Voltar às cartas"
+  }
+}

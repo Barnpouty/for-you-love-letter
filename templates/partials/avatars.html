@@ -1,0 +1,152 @@
+{#
+  Avatar pair — "the one who writes" (left) and "the one who receives" (right).
+
+  Every limb and head is its own <g> with a fixed pivot (see static/css/avatars.css),
+  so poses are pure CSS transforms toggled by static/js/modules/avatars.js:
+    pose-wave · pose-offer · pose-comfort · pose-embrace · pose-uplift
+    pose-joy · pose-calm · pose-reading   (+ modifiers is-pointing, is-walking)
+
+  Usage: {{ avatar_scene('av-hero', prop='stack', label='…') }}
+  `id` must be unique per page (gradient ids are prefixed with it).
+#}
+{% macro avatar_scene(id, prop='letter', label='', extra_class='') %}
+<svg class="avatars {{ extra_class }}" id="{{ id }}" viewBox="60 104 480 400" role="img" aria-label="{{ label }}" focusable="false" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="{{ id }}-skinA" cx="36%" cy="30%" r="78%"><stop offset="0" stop-color="#AE7650"/><stop offset="1" stop-color="#76472D"/></radialGradient>
+    <radialGradient id="{{ id }}-skinB" cx="36%" cy="30%" r="78%"><stop offset="0" stop-color="#CF9C77"/><stop offset="1" stop-color="#9B6646"/></radialGradient>
+    <linearGradient id="{{ id }}-sweater" x1="0" y1="0" x2=".35" y2="1"><stop offset="0" stop-color="#BC5B3D"/><stop offset="1" stop-color="#8A3B27"/></linearGradient>
+    <linearGradient id="{{ id }}-dress" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F5ECDB"/><stop offset="1" stop-color="#D9C6A6"/></linearGradient>
+    <linearGradient id="{{ id }}-cardigan" x1="0" y1="0" x2=".4" y2="1"><stop offset="0" stop-color="#8F9965"/><stop offset="1" stop-color="#5F6840"/></linearGradient>
+    <linearGradient id="{{ id }}-hair" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3A2620"/><stop offset="1" stop-color="#1C120E"/></linearGradient>
+    <radialGradient id="{{ id }}-shadow"><stop offset="0" stop-color="#3B231B" stop-opacity=".26"/><stop offset="1" stop-color="#3B231B" stop-opacity="0"/></radialGradient>
+    <radialGradient id="{{ id }}-sheen" cx="35%" cy="25%" r="60%"><stop offset="0" stop-color="#fff" stop-opacity=".22"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+  </defs>
+
+  {# ============ THE ONE WHO WRITES ============ #}
+  <g class="g-giver">
+    <ellipse class="av-shadow" cx="210" cy="482" rx="78" ry="11" fill="url(#{{ id }}-shadow)"/>
+    <g class="g-leg1"><path d="M197,390 L194,468" stroke="#3B2A25" stroke-width="24" stroke-linecap="round"/><ellipse cx="190" cy="476" rx="17" ry="7.5" fill="#24170F"/></g>
+    <g class="g-leg2"><path d="M223,390 L226,468" stroke="#33231F" stroke-width="24" stroke-linecap="round"/><ellipse cx="231" cy="476" rx="17" ry="7.5" fill="#24170F"/></g>
+
+    <g class="g-torso">
+      <path d="M164,294 C164,262 186,248 210,248 C234,248 256,262 256,294 L263,398 C230,411 190,411 157,398 Z" fill="url(#{{ id }}-sweater)"/>
+      <path d="M164,294 C164,262 186,248 210,248 C234,248 256,262 256,294 L263,398 C230,411 190,411 157,398 Z" fill="url(#{{ id }}-sheen)"/>
+      <path d="M160,388 C192,398 228,398 260,388" stroke="#7C3322" stroke-width="3" fill="none" opacity=".55"/>
+      <path d="M195,251 Q210,265 225,251" stroke="#7C3322" stroke-width="4" fill="none" stroke-linecap="round"/>
+    </g>
+
+    <g class="ga-l">
+      <path d="M171,272 L156,350" stroke="#A54B31" stroke-width="25" stroke-linecap="round"/>
+      <circle cx="155" cy="361" r="11.5" fill="url(#{{ id }}-skinA)"/>
+    </g>
+
+    <rect x="201" y="222" width="18" height="34" rx="8" fill="#7A4A30"/>
+    <g class="gh">
+      <circle cx="162" cy="201" r="9.5" fill="#8A5639"/>
+      <circle cx="258" cy="201" r="9.5" fill="#8A5639"/>
+      <circle cx="210" cy="195" r="49" fill="url(#{{ id }}-skinA)"/>
+      <ellipse cx="190" cy="172" rx="20" ry="12" fill="url(#{{ id }}-sheen)"/>
+      <path d="M161,192 C156,150 182,134 212,134 C246,134 266,156 259,194 C253,176 240,165 222,163 C205,172 186,172 169,167 C165,175 163,183 161,192 Z" fill="url(#{{ id }}-hair)"/>
+      <path d="M185,181 q8,-5 16,0 M219,181 q8,-5 16,0" stroke="#24170F" stroke-width="3.2" fill="none" stroke-linecap="round"/>
+      <g class="av-eyes">
+        <g class="av-gaze">
+          <ellipse cx="194" cy="198" rx="4.4" ry="5.6" fill="#24140F"/>
+          <ellipse cx="226" cy="198" rx="4.4" ry="5.6" fill="#24140F"/>
+          <circle cx="195.6" cy="196" r="1.4" fill="#fff" opacity=".9"/>
+          <circle cx="227.6" cy="196" r="1.4" fill="#fff" opacity=".9"/>
+        </g>
+      </g>
+      <path class="av-eyes-closed" d="M188,199 q6,5 12,0 M220,199 q6,5 12,0" stroke="#24140F" stroke-width="2.8" fill="none" stroke-linecap="round"/>
+      <path d="M209,205 q-3,7 2,9" stroke="#5E341F" stroke-width="2" fill="none" stroke-linecap="round" opacity=".7"/>
+      <circle cx="180" cy="214" r="8" fill="#C4553A" opacity=".22"/>
+      <circle cx="240" cy="214" r="8" fill="#C4553A" opacity=".22"/>
+      <path class="av-mouth" d="M200,221 Q210,228 220,221" stroke="#4A2016" stroke-width="3" fill="none" stroke-linecap="round"/>
+      <path class="av-mouth-joy" d="M198,219 Q210,233 222,219 Z" fill="#5A2318" stroke="#4A2016" stroke-width="2" stroke-linejoin="round"/>
+    </g>
+  </g>
+
+  {# ============ THE ONE WHO RECEIVES ============ #}
+  <g class="g-recv">
+   <g class="r-hop">
+    <ellipse class="av-shadow" cx="390" cy="482" rx="80" ry="11" fill="url(#{{ id }}-shadow)"/>
+    <g class="rh rh-back">
+      <path d="M341,190 C334,140 362,127 392,127 C424,127 449,146 442,196 C447,240 454,286 437,310 C418,296 364,296 345,310 C329,284 336,236 341,190 Z" fill="url(#{{ id }}-hair)"/>
+    </g>
+    <g class="r-leg1"><path d="M379,438 L377,468" stroke="#A9714F" stroke-width="14" stroke-linecap="round"/><ellipse cx="373" cy="475" rx="14" ry="6.5" fill="#7E3A26"/></g>
+    <g class="r-leg2"><path d="M401,438 L403,468" stroke="#9B6646" stroke-width="14" stroke-linecap="round"/><ellipse cx="408" cy="475" rx="14" ry="6.5" fill="#7E3A26"/></g>
+
+    <g class="r-torso">
+      <path d="M353,292 C353,262 370,250 390,250 C410,250 427,262 427,292 L447,446 C412,458 368,458 333,446 Z" fill="url(#{{ id }}-dress)"/>
+      <path d="M353,292 C353,262 370,250 386,250 L381,330 L373,412 C362,414 352,412 343,407 Z" fill="url(#{{ id }}-cardigan)"/>
+      <path d="M427,292 C427,262 410,250 394,250 L399,330 L407,412 C418,414 428,412 437,407 Z" fill="url(#{{ id }}-cardigan)"/>
+      <path d="M353,292 C353,262 370,250 386,250 L381,330 L373,412 C362,414 352,412 343,407 Z" fill="url(#{{ id }}-sheen)"/>
+      <circle cx="385" cy="300" r="2.2" fill="#4E5532"/><circle cx="383" cy="330" r="2.2" fill="#4E5532"/>
+    </g>
+
+    <g class="ra-r">
+      <path d="M424,272 L437,348" stroke="#727C4D" stroke-width="22" stroke-linecap="round"/>
+      <circle cx="438" cy="358" r="10.5" fill="url(#{{ id }}-skinB)"/>
+    </g>
+
+    <rect x="382" y="222" width="16" height="34" rx="7" fill="#9B6646"/>
+    <g class="rh">
+      <circle cx="345" cy="203" r="8.5" fill="#B07B58"/>
+      <circle cx="390" cy="196" r="47" fill="url(#{{ id }}-skinB)"/>
+      <ellipse cx="372" cy="174" rx="19" ry="11" fill="url(#{{ id }}-sheen)"/>
+      <path d="M343,194 C340,152 365,137 392,137 C421,137 441,156 438,190 C428,172 410,160 390,164 C376,172 358,178 343,194 Z" fill="url(#{{ id }}-hair)"/>
+      <path d="M436,186 C442,214 440,240 432,258" stroke="#22150F" stroke-width="9" fill="none" stroke-linecap="round"/>
+      {# a sprig of lavender in her hair — the ebook's recurring flower #}
+      <g class="av-lavender">
+        <path d="M424,150 L440,128" stroke="#6F7A45" stroke-width="2" stroke-linecap="round"/>
+        <circle cx="437" cy="131" r="3" fill="#8B76A8"/><circle cx="433" cy="136" r="3" fill="#7D6A9C"/><circle cx="440" cy="126" r="2.6" fill="#9A86B6"/><circle cx="429" cy="141" r="2.8" fill="#8B76A8"/>
+      </g>
+      <path d="M366,182 q8,-5 15,0 M399,182 q8,-5 15,0" stroke="#22150F" stroke-width="2.8" fill="none" stroke-linecap="round"/>
+      <g class="av-eyes">
+        <g class="av-gaze">
+          <ellipse cx="374" cy="198" rx="4.2" ry="5.4" fill="#24140F"/>
+          <ellipse cx="406" cy="198" rx="4.2" ry="5.4" fill="#24140F"/>
+          <circle cx="375.5" cy="196" r="1.3" fill="#fff" opacity=".9"/>
+          <circle cx="407.5" cy="196" r="1.3" fill="#fff" opacity=".9"/>
+        </g>
+      </g>
+      <path d="M367,194 l-4,-3 M413,194 l4,-3" stroke="#24140F" stroke-width="2" stroke-linecap="round"/>
+      <path class="av-eyes-closed" d="M368,199 q6,5 12,0 M400,199 q6,5 12,0" stroke="#24140F" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+      <path d="M389,205 q-3,6 2,8" stroke="#7A4A30" stroke-width="1.8" fill="none" stroke-linecap="round" opacity=".7"/>
+      <circle cx="361" cy="213" r="8" fill="#C4553A" opacity=".24"/>
+      <circle cx="419" cy="213" r="8" fill="#C4553A" opacity=".24"/>
+      <path class="av-mouth" d="M381,219 Q390,226 399,219" stroke="#5A2318" stroke-width="2.8" fill="none" stroke-linecap="round"/>
+      <path class="av-mouth-joy" d="M379,218 Q390,231 401,218 Z" fill="#6A281B" stroke="#5A2318" stroke-width="2" stroke-linejoin="round"/>
+    </g>
+
+    <g class="ra-l">
+      <path d="M356,272 L344,348" stroke="#7C8653" stroke-width="22" stroke-linecap="round"/>
+      <g class="r-prop" transform="translate(318 341) rotate(-10)">
+        <rect width="44" height="30" rx="2" fill="#F4EBD9" stroke="#D3BF9C"/>
+        <path d="M1,1 L22,17 L43,1" fill="none" stroke="#C9B48F" stroke-width="1.4"/>
+        <circle cx="22" cy="17" r="5" fill="#A3452E"/>
+      </g>
+      <circle cx="343" cy="358" r="10.5" fill="url(#{{ id }}-skinB)"/>
+    </g>
+   </g>
+  </g>
+
+  {# The writer's reaching arm is drawn last so it can rest on the other's shoulder #}
+  <g class="g-giver g-arm-layer">
+    <g class="ga-r">
+      <path d="M249,272 L262,350" stroke="#AE4F34" stroke-width="25" stroke-linecap="round"/>
+      <g class="g-prop">
+        {% if prop == 'stack' %}
+        <image href="{{ asset('images/illustrations/stack.webp') }}" x="219" y="322" width="88" height="64" preserveAspectRatio="xMidYMid meet"/>
+        {% else %}
+        <g transform="translate(241 343) rotate(6)">
+          <rect width="44" height="30" rx="2" fill="#F4EBD9" stroke="#D3BF9C"/>
+          <path d="M1,1 L22,17 L43,1" fill="none" stroke="#C9B48F" stroke-width="1.4"/>
+          <circle cx="22" cy="17" r="5" fill="#A3452E"/>
+        </g>
+        {% endif %}
+      </g>
+      <circle cx="263" cy="360" r="11.5" fill="url(#{{ id }}-skinA)"/>
+    </g>
+  </g>
+</svg>
+{% endmacro %}

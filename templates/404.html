@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="{{ c.html_lang }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ c.notfound.title }} — For You</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" type="image/svg+xml" href="{{ asset('favicon.svg') }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,500;1,400&family=Alegreya+Sans:wght@400;500&display=swap">
+  <link rel="stylesheet" href="{{ asset('css/main.css') }}">
+</head>
+<body class="notfound">
+  <main class="notfound__inner">
+    <img src="{{ asset('images/illustrations/envelope.webp') }}" alt="" width="218" height="145">
+    <h1>{{ c.notfound.title }}</h1>
+    <p>{{ c.notfound.body }}</p>
+    <a class="btn btn--primary" href="/{{ lang }}">{{ c.notfound.back }}</a>
+  </main>
+</body>
+</html>

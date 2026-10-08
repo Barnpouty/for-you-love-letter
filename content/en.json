@@ -1,0 +1,493 @@
+{
+  "html_lang": "en",
+  "og_locale": "en_US",
+  "language_name": "English",
+  "language_short": "EN",
+  "meta": {
+    "title": "For You — Love Letters for Every Occasion",
+    "description": "Sixteen “open when” love letters for the sad days, the heavy days, the hopeful days and every day in between. A digital collection to give to someone you love.",
+    "og_title": "For You — a collection of love letters",
+    "og_description": "Letters for the days when someone needs to feel loved, understood, and reminded that they are not alone."
+  },
+  "nav": {
+    "skip": "Skip to content",
+    "home": "For You, home",
+    "letters": "The letters",
+    "inside": "Inside the book",
+    "faith": "Faith",
+    "cta": "Get the letters",
+    "language": "Choose language"
+  },
+  "hero": {
+    "kicker": "A collection of love letters",
+    "title_lines": [
+      "Some things are",
+      "easier to say",
+      "when they’re",
+      "written."
+    ],
+    "lede": "Sixteen letters for the quiet days, the heavy days, the hopeful days, and every day in between. Written so the person you love never has to face them alone.",
+    "cta_primary": "Get the Love Letters",
+    "cta_note": "Digital PDF in English. Continues to secure checkout.",
+    "cta_secondary": "Explore the Letters",
+    "scene_label": "Two illustrated figures. One holds a bundle of letters tied with a ribbon and lavender, and offers it to the other."
+  },
+  "intro": {
+    "statement": "This is not a book you read from start to finish. It is a collection of letters waiting for the right moment.",
+    "body": "When a feeling arrives, you turn to the letter written for it. Some days you’ll need more than one. That is okay. There is no right or wrong order.",
+    "aside": "And if you want me beside you… I am here.",
+    "aside_source": "From “How to Use This Book”",
+    "img_alt": "A small bundle of letters tied with a green ribbon and a sprig of lavender"
+  },
+  "moments": {
+    "title": "What does your heart need today?",
+    "lede": "Choose the feeling closest to yours. A letter will find you.",
+    "menu_label": "Feelings",
+    "envelope_front": "For the moment you’re in",
+    "envelope_hint": "Choose a feeling and a letter will find you.",
+    "after": "Some words are meant to find you at exactly the right moment.",
+    "cta": "Get the complete collection",
+    "cta_note": "All 16 letters, complete, in one keepsake PDF.",
+    "scene_label": "The two figures react to the letter you open."
+  },
+  "moods": [
+    {
+      "id": "sad",
+      "label": "I feel sad",
+      "letter": 1
+    },
+    {
+      "id": "overwhelmed",
+      "label": "I’m overwhelmed",
+      "letter": 2
+    },
+    {
+      "id": "hug",
+      "label": "I need a hug",
+      "letter": 3
+    },
+    {
+      "id": "hope",
+      "label": "I need hope",
+      "letter": 4
+    },
+    {
+      "id": "alone",
+      "label": "I feel alone",
+      "letter": 5
+    },
+    {
+      "id": "loved",
+      "label": "I just need to feel loved",
+      "letter": 6
+    },
+    {
+      "id": "heavy",
+      "label": "The day feels heavy",
+      "letter": 7
+    },
+    {
+      "id": "strength",
+      "label": "I need strength",
+      "letter": 8
+    },
+    {
+      "id": "miss",
+      "label": "I miss you",
+      "letter": 9
+    },
+    {
+      "id": "reconnect",
+      "label": "We need to reconnect",
+      "letter": 10
+    },
+    {
+      "id": "good",
+      "label": "Something good happened",
+      "letter": 11
+    },
+    {
+      "id": "doubt",
+      "label": "I’m doubting myself",
+      "letter": 15
+    },
+    {
+      "id": "morning",
+      "label": "It’s a new morning",
+      "letter": 13
+    },
+    {
+      "id": "night",
+      "label": "It’s late and my mind won’t rest",
+      "letter": 14
+    }
+  ],
+  "wall": {
+    "title": "Open when…",
+    "lede": "Sixteen envelopes, each written for a particular kind of day. Open one to read how it begins.",
+    "list_label": "The sixteen letters"
+  },
+  "ui": {
+    "letter": "Letter",
+    "close": "Close",
+    "prev": "Previous letter",
+    "next": "Next letter",
+    "glimpse": "This is only a glimpse. The full letter is waiting in the collection.",
+    "cta": "Get the complete collection",
+    "open_letter": "Open letter"
+  },
+  "letters": [
+    {
+      "n": 1,
+      "image": "l01",
+      "page": 5,
+      "atmosphere": "quiet",
+      "pose": "comfort",
+      "title": "Open When You’re Sad",
+      "wall_prefix": "Open when",
+      "wall_label": "you’re sad",
+      "epigraph": "You are allowed to be sad. And you are still so deeply loved.",
+      "line": "I can’t promise I can immediately fix what is hurting you. But I can promise that you do not have to sit with it alone.",
+      "label": "To hold close",
+      "quote": "I will not rush you to feel better. I will simply stay.",
+      "closing": "Come here.",
+      "img_alt": "Two hands holding a warm painted mug"
+    },
+    {
+      "n": 2,
+      "image": "l02",
+      "page": 6,
+      "atmosphere": "calm",
+      "pose": "comfort",
+      "title": "Open When You’re Overwhelmed",
+      "wall_prefix": "Open when",
+      "wall_label": "you’re overwhelmed",
+      "epigraph": "Stop for a second. Breathe in. Breathe out.",
+      "line": "You do not have to solve all of it tonight. Just the next small thing.",
+      "label": "Breathe",
+      "quote": "Put one thing down. Just one. The world can wait for you to catch your breath.",
+      "closing": "I’ve got you.",
+      "img_alt": "A glass of water beside a sprig of rosemary"
+    },
+    {
+      "n": 3,
+      "image": "l03",
+      "page": 7,
+      "atmosphere": "warm",
+      "pose": "embrace",
+      "title": "Open When You Need a Hug",
+      "wall_prefix": "Open when",
+      "wall_label": "you need a hug",
+      "epigraph": "Consider this a hug in letter form.",
+      "line": "It is not the real thing, so this also counts as a voucher: one real hug, redeemable at any time, no expiry date, no questions asked.",
+      "label": "Voucher",
+      "quote": "One real hug. Redeemable at any time, no expiry date, no questions asked.",
+      "closing": "Come here. Right now.",
+      "img_alt": "A folded knitted blanket"
+    },
+    {
+      "n": 4,
+      "image": "l04",
+      "page": 8,
+      "atmosphere": "warm",
+      "pose": "uplift",
+      "title": "Open When You Need Hope",
+      "wall_prefix": "Open when",
+      "wall_label": "you need hope",
+      "epigraph": "The sun does not ask permission to come up in the morning. It just does.",
+      "line": "Remember the things God has already carried you through. This is not the first hard season you have faced — and look, you are still here.",
+      "label": "Truth",
+      "quote": "This season will pass. Seasons always do. Morning is coming.",
+      "closing": "Keep your head up. Morning is coming.",
+      "img_alt": "A small green sprout growing from dark soil"
+    },
+    {
+      "n": 5,
+      "image": "l05",
+      "page": 9,
+      "atmosphere": "quiet",
+      "pose": "embrace",
+      "title": "Open When You Feel Alone",
+      "wall_prefix": "Open when",
+      "wall_label": "you feel alone",
+      "epigraph": "You have a person choosing you on purpose — every day, in every season.",
+      "line": "Loneliness can be a liar. It tells you that no one would understand, that you are too much, that reaching out is a burden.",
+      "label": "Promise",
+      "quote": "Send me a single dot if that is all you have got. I will know what it means.",
+      "closing": "Come close.",
+      "img_alt": "Two ceramic mugs side by side"
+    },
+    {
+      "n": 6,
+      "image": "l06",
+      "page": 10,
+      "atmosphere": "romantic",
+      "pose": "joy",
+      "title": "Open When You Need to Remember That I Love You",
+      "wall_prefix": "Open when",
+      "wall_label": "you need to remember I love you",
+      "epigraph": "My love is not a fair-weather thing. It stays. It chooses. It remains.",
+      "line": "I love you. Not only on the easy days, when you are laughing and everything is fine. On the heavy days too. Especially then.",
+      "label": "Forever",
+      "quote": "I love you. Read it again if you need to. It is still true.",
+      "closing": "Always. Still. Completely.",
+      "img_alt": "A small bouquet of pink wild roses and olive leaves"
+    },
+    {
+      "n": 7,
+      "image": "l07",
+      "page": 11,
+      "atmosphere": "quiet",
+      "pose": "comfort",
+      "title": "Open When the Day Feels Heavy",
+      "wall_prefix": "Open when",
+      "wall_label": "the day feels heavy",
+      "epigraph": "This moment does not define your entire story. It is a difficult chapter.",
+      "line": "God gives the hardest battles to His strongest soldiers — but even strong soldiers need rest, need encouragement, need someone to stand beside them.",
+      "label": "Rest",
+      "quote": "You do not have to be strong every second. You can rest. You can cry. You can be quiet.",
+      "closing": "This battle is difficult. You are not weak.",
+      "img_alt": "A clay bowl of smooth river stones with olive leaves"
+    },
+    {
+      "n": 8,
+      "image": "l08",
+      "page": 12,
+      "atmosphere": "warm",
+      "pose": "uplift",
+      "title": "Open When You Need Strength",
+      "wall_prefix": "Open when",
+      "wall_label": "you need strength",
+      "epigraph": "Strength is not never feeling tired. Strength is continuing even when you are.",
+      "line": "You have walked through fire before and come out still standing. You will do it again.",
+      "label": "Take heart",
+      "quote": "Take the next breath. Take the next step. That is enough.",
+      "closing": "I’m proud of you for continuing. Truly.",
+      "img_alt": "A small terracotta oil lamp with a lit flame"
+    },
+    {
+      "n": 9,
+      "image": "l09",
+      "page": 13,
+      "atmosphere": "romantic",
+      "pose": "embrace",
+      "title": "Open When You’re Missing Me",
+      "wall_prefix": "Open when",
+      "wall_label": "you’re missing me",
+      "epigraph": "You are carried with me. In the ordinary moments. In the quiet ones.",
+      "line": "When something good happens, I want to tell you first. When something hard lands, I wish you were close enough to hold.",
+      "label": "Near or far",
+      "quote": "Tell me about your day, even the boring parts. I want all of it.",
+      "closing": "Counting the days until I’m close again.",
+      "img_alt": "A brass compass resting on an old map"
+    },
+    {
+      "n": 10,
+      "image": "l10",
+      "page": 14,
+      "atmosphere": "romantic",
+      "pose": "reading",
+      "title": "Open When We Need to Reconnect",
+      "wall_prefix": "Open when",
+      "wall_label": "we need to reconnect",
+      "epigraph": "Us against the problem. Not me against you.",
+      "line": "When something hurts you, talk to me. When you need space, I will respect it. When you need comfort, I will give it.",
+      "label": "Partners",
+      "quote": "I do not want to win against you. I want us to win together.",
+      "closing": "I’m on your side. Always have been.",
+      "img_alt": "A wooden table with two chairs facing each other"
+    },
+    {
+      "n": 11,
+      "image": "l11",
+      "page": 15,
+      "atmosphere": "bright",
+      "pose": "joy",
+      "title": "Open When Something Good Happens",
+      "wall_prefix": "Open when",
+      "wall_label": "something good happens",
+      "epigraph": "Your joy is not background noise to me — it is something I pay attention to.",
+      "line": "I am cheering for you from the front row. Always. This is beautiful. And so are you.",
+      "label": "Celebrate",
+      "quote": "Good moments are allowed to simply be good. Let yourself enjoy this.",
+      "closing": "Celebrating you. Always.",
+      "img_alt": "A painted bowl of figs and cherries"
+    },
+    {
+      "n": 12,
+      "image": "l12",
+      "page": 16,
+      "atmosphere": "romantic",
+      "pose": "joy",
+      "title": "Open Just Because",
+      "wall_prefix": "Open",
+      "wall_label": "just because",
+      "epigraph": "You do not need a reason to be loved. You do not need to earn softness from me.",
+      "line": "No crisis. No special occasion. Just this: I was thinking about you.",
+      "label": "Simple truth",
+      "quote": "I am glad you exist. I am glad you are mine to love. That is all. That is enough.",
+      "closing": "Just because. Always because.",
+      "img_alt": "A sprig of white blossoms"
+    },
+    {
+      "n": 13,
+      "image": "l13",
+      "page": 17,
+      "atmosphere": "morning",
+      "pose": "uplift",
+      "title": "A Morning Note for You",
+      "wall_prefix": "",
+      "wall_label": "a morning note",
+      "epigraph": "You are starting this day already loved. Nothing will change that.",
+      "line": "God is already ahead of you in this day. He knows what it holds, and He has not forgotten you for a single second.",
+      "label": "Gentle start",
+      "quote": "Drink some water. Take a slow breath. One thing at a time is still progress.",
+      "closing": "Have a soft morning. I’m with you.",
+      "img_alt": "A ceramic jug, a glass of water and half a lemon on a tray"
+    },
+    {
+      "n": 14,
+      "image": "l14",
+      "page": 18,
+      "atmosphere": "night",
+      "pose": "calm",
+      "title": "A Night Note for You",
+      "wall_prefix": "",
+      "wall_label": "a night note",
+      "epigraph": "Whatever this day held, you do not have to carry it all into sleep.",
+      "line": "The day is ending. You made it through.",
+      "label": "Rest",
+      "quote": "Rest is not quitting. You are allowed to stop. Set it down.",
+      "closing": "Goodnight. I’m here.",
+      "img_alt": "A lit candle beside a leather-bound journal"
+    },
+    {
+      "n": 15,
+      "image": "l15",
+      "page": 19,
+      "atmosphere": "calm",
+      "pose": "uplift",
+      "title": "Open When You’re Doubting Yourself",
+      "wall_prefix": "Open when",
+      "wall_label": "you’re doubting yourself",
+      "epigraph": "I see you more clearly than the doubt does.",
+      "line": "You are not behind. You are not failing. You are becoming. And becoming is rarely tidy or linear.",
+      "label": "Remember",
+      "quote": "Trust the evidence of your own life more than the accusations of a hard day.",
+      "closing": "I see you. I choose you. Still.",
+      "img_alt": "An antique hand mirror with green leaves"
+    },
+    {
+      "n": 16,
+      "image": "l16",
+      "page": 20,
+      "atmosphere": "faith",
+      "pose": "calm",
+      "title": "A Prayer for Us & Closing Words",
+      "wall_prefix": "",
+      "wall_label": "a prayer for us",
+      "epigraph": "If you remember only one thing: you are not alone.",
+      "line": "Keep your head up. Keep trusting God. And when life gets heavy… come to me.",
+      "label": "A prayer for us",
+      "quote": "Remind her that she does not have to carry everything alone. Protect her heart. Guide her steps.",
+      "closing": "Us against the problem. Always. I’m here.",
+      "img_alt": "Two hands resting gently on top of each other"
+    }
+  ],
+  "product": {
+    "title": "For You",
+    "subtitle": "A collection of love letters for every occasion",
+    "body": "A keepsake PDF of sixteen letters, a dedication, and a closing prayer, laid out like a handwritten book and illustrated with small painted objects: a warm mug, a glass of water, a candle for the night.",
+    "facts": [
+      {
+        "term": "Format",
+        "detail": "Digital PDF, 20 illustrated pages"
+      },
+      {
+        "term": "Inside",
+        "detail": "16 letters, a dedication and a closing prayer"
+      },
+      {
+        "term": "Language",
+        "detail": "English"
+      },
+      {
+        "term": "Read it",
+        "detail": "On a phone or tablet, or printed and kept close"
+      }
+    ],
+    "cta": "Get the Love Letters",
+    "cta_note": "You’ll continue to secure checkout to complete your purchase.",
+    "contents_title": "Contents",
+    "contents_lede": "Turn directly to the letter that matches your heart today.",
+    "page_label": "page",
+    "mockup_alt": "The cover of For You: a painting of an open book, lavender in a clay jug, and a cup of tea",
+    "preview_alts": [
+      "The contents page listing all sixteen letters",
+      "The first page of the letter Open When You’re Sad, partly blurred"
+    ]
+  },
+  "value": {
+    "title": "Something to return to",
+    "lede": "A gift that isn’t only for one day. It waits for whichever day it happens to be.",
+    "list_label": "Come back to it when",
+    "moments": [
+      "they need reassurance",
+      "everything feels like too much",
+      "they’re missing someone",
+      "they need encouragement",
+      "they need to feel loved",
+      "hope is running low",
+      "they need comfort",
+      "you need to find each other again",
+      "something good deserves celebrating",
+      "they need reminding they’re not alone"
+    ],
+    "give_title": "To give",
+    "give_body": "To the one who carries so much and still finds room for you. For a partner far away, a partner in a hard season, or one you simply want to remind that they are chosen.",
+    "keep_title": "To keep",
+    "keep_body": "For yourself, for the nights you need to read that rest is not quitting, and the mornings you need to start the day already loved.",
+    "img_alt": "Painting of an open book, a clay jug of lavender and a cup of tea on a wooden table"
+  },
+  "faith": {
+    "label": "A prayer for us",
+    "title": "Keep trusting God.",
+    "body": "Faith runs quietly through these pages. Not as a sermon, but the way it lives inside a relationship: remembering what you’ve already been carried through, and praying for each other.",
+    "quote": "He is still working, even when you cannot see what He is doing.",
+    "quote_source": "Open When You Need Hope",
+    "prayer": [
+      "Give her peace when her mind feels overwhelmed.",
+      "Remind her that she does not have to carry everything alone.",
+      "Protect her heart. Guide her steps."
+    ],
+    "amen": "Amen.",
+    "img_alt": "Two hands resting on each other"
+  },
+  "testimonials": {
+    "title": "From readers",
+    "items": []
+  },
+  "final": {
+    "title": "Keep the words close.",
+    "lede": "For the days when they need to hear it, and the days they don’t know they do.",
+    "remember": "You are not alone. Keep your head up. And when life gets heavy, come close.",
+    "cta": "Get the Love Letters",
+    "cta_note": "Digital PDF in English. Continues to secure checkout.",
+    "scene_label": "The two figures walk toward each other and hold each other close."
+  },
+  "sticky": {
+    "text": "16 love letters, one keepsake PDF",
+    "cta": "Get the letters"
+  },
+  "footer": {
+    "tagline": "Your mental health matters.",
+    "note": "These letters are words of love and encouragement. They are not therapy and are not a substitute for professional care. If you or someone you love is struggling, please reach out to a qualified professional or local support services.",
+    "rights": "All rights reserved.",
+    "language": "Read this page in"
+  },
+  "notfound": {
+    "title": "This page isn’t here.",
+    "body": "The letter you’re looking for is somewhere else.",
+    "back": "Back to the letters"
+  }
+}

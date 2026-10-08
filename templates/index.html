@@ -1,0 +1,292 @@
+{% extends "base.html" %}
+{% from "partials/avatars.html" import avatar_scene %}
+{% set tilts = [-1.6, 1.2, -0.6, 1.8, 0.8, -1.4, 1.5, -0.9, -1.2, 0.7, -1.7, 1.1, 0.9, -0.5, 1.6, -1.1] %}
+
+{% block body %}
+<a class="skip-link" href="#main">{{ c.nav.skip }}</a>
+
+{# ================= HEADER ================= #}
+<header class="site-header" data-header>
+  <div class="site-header__inner">
+    <a class="wordmark" href="/{{ lang }}" aria-label="{{ c.nav.home }}">For You</a>
+    <nav class="site-nav" aria-label="{{ c.nav.home }}">
+      <a href="#letters">{{ c.nav.letters }}</a>
+      <a href="#inside">{{ c.nav.inside }}</a>
+      <a href="#faith">{{ c.nav.faith }}</a>
+    </nav>
+    <div class="site-header__actions">
+      <div class="lang-switch" role="group" aria-label="{{ c.nav.language }}">
+        <a href="/en" hreflang="en" lang="en" data-lang-link="en" {% if lang == 'en' %}aria-current="true"{% endif %}><span class="visually-hidden">English</span><span aria-hidden="true">EN</span></a>
+        <a href="/pt" hreflang="pt" lang="pt" data-lang-link="pt" {% if lang == 'pt' %}aria-current="true"{% endif %}><span class="visually-hidden">Português</span><span aria-hidden="true">PT</span></a>
+      </div>
+      <a class="btn btn--small btn--outline" href="{{ checkout_url }}" data-checkout data-cta="header">{{ c.nav.cta }}</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  {# ================= HERO ================= #}
+  <section class="hero" aria-labelledby="hero-title" data-hero>
+    <div class="hero__text">
+      <p class="kicker">{{ c.hero.kicker }}</p>
+      <h1 id="hero-title" class="hero__title">
+        {%- for line in c.hero.title_lines -%}
+        <span class="line" style="--i: {{ loop.index0 }}"><span>{{ line }}</span></span>{{ ' ' if not loop.last }}
+        {%- endfor -%}
+      </h1>
+      <p class="hero__lede">{{ c.hero.lede }}</p>
+      <div class="hero__actions">
+        <a class="btn btn--primary" href="{{ checkout_url }}" data-checkout data-cta="hero" data-hero-cta>{{ c.hero.cta_primary }}</a>
+        <a class="link-quiet" href="#moments">{{ c.hero.cta_secondary }}</a>
+      </div>
+      <p class="fine">{{ c.hero.cta_note }}</p>
+    </div>
+    <div class="hero__scene">
+      {{ avatar_scene('av-hero', prop='stack', label=c.hero.scene_label) }}
+    </div>
+  </section>
+
+  {# ================= HOW IT WORKS (from the ebook's guide) ================= #}
+  <section class="intro" aria-label="{{ c.intro.aside_source }}">
+    <img class="intro__img" src="{{ asset('images/illustrations/stack.webp') }}" alt="{{ c.intro.img_alt }}" width="316" height="230" loading="lazy">
+    <p class="intro__statement">{{ c.intro.statement }}</p>
+    <div class="intro__body">
+      <p>{{ c.intro.body }}</p>
+      <p class="intro__aside">{{ c.intro.aside }}<cite>{{ c.intro.aside_source }}</cite></p>
+    </div>
+  </section>
+
+  {# ================= CHOOSE YOUR MOMENT ================= #}
+  <section class="moments" id="moments" data-moments data-atmosphere="default" aria-labelledby="moments-title">
+    <div class="moments__inner">
+      <div class="moments__ask">
+        <h2 id="moments-title" class="section-title">{{ c.moments.title }}</h2>
+        <p class="moments__lede">{{ c.moments.lede }}</p>
+        <div class="moods" role="group" aria-label="{{ c.moments.menu_label }}">
+          {%- for m in c.moods -%}
+          <button type="button" class="mood" data-mood="{{ m.id }}" data-letter="{{ m.letter }}" aria-pressed="false" aria-controls="moment-paper">{{ m.label }}</button>
+          {%- endfor -%}
+        </div>
+        <div class="moments__after">
+          <p class="moments__after-text" data-moment-after>{{ c.moments.after }}</p>
+          <a class="btn btn--primary" href="{{ checkout_url }}" data-checkout data-cta="moments" data-moment-cta>{{ c.moments.cta }}</a>
+          <p class="fine">{{ c.moments.cta_note }}</p>
+        </div>
+      </div>
+
+      <div class="moments__stage">
+        <div class="moments__avatars">
+          {{ avatar_scene('av-moment', prop='letter', label=c.moments.scene_label) }}
+        </div>
+        <div class="envelope" data-envelope>
+          <div class="envelope__back" aria-hidden="true"></div>
+          <div class="envelope__slot">
+            <article class="envelope__paper paper" id="moment-paper" aria-live="polite" aria-atomic="true" tabindex="-1">
+              <div class="paper__content" data-paper-content></div>
+            </article>
+          </div>
+          <div class="envelope__front" aria-hidden="true"><span>{{ c.moments.envelope_front }}</span></div>
+          <div class="envelope__flap" aria-hidden="true"></div>
+          <span class="envelope__seal" aria-hidden="true"></span>
+        </div>
+        <p class="envelope__hint" data-envelope-hint>{{ c.moments.envelope_hint }}</p>
+      </div>
+    </div>
+  </section>
+
+  {# ================= OPEN WHEN… WALL ================= #}
+  <section class="wall" id="letters" aria-labelledby="wall-title">
+    <div class="section-head">
+      <h2 id="wall-title" class="section-title section-title--display">{{ c.wall.title }}</h2>
+      <p class="section-lede">{{ c.wall.lede }}</p>
+    </div>
+    <ol class="wall__grid" aria-label="{{ c.wall.list_label }}" data-wall>
+      {%- for l in c.letters %}
+      <li class="wall__item" style="--tilt: {{ tilts[loop.index0] }}deg; --d: {{ loop.index0 }}">
+        <button type="button" class="env" data-letter="{{ l.n }}" aria-haspopup="dialog" aria-label="{{ c.ui.open_letter }}: {{ l.title }}">
+          <span class="env__flap" aria-hidden="true"></span>
+          <span class="env__no" aria-hidden="true">{{ '%02d' | format(l.n) }}</span>
+          <span class="env__text" aria-hidden="true">
+            {%- if l.wall_prefix %}<span class="env__prefix">{{ l.wall_prefix }}</span>{% endif -%}
+            <span class="env__label">{{ l.wall_label }}</span>
+          </span>
+          <img class="env__object" src="{{ asset('images/illustrations/' ~ l.image ~ '.webp') }}" alt="" width="240" height="200" loading="lazy" decoding="async">
+        </button>
+      </li>
+      {%- endfor %}
+    </ol>
+  </section>
+
+  {# ================= PRODUCT ================= #}
+  <section class="product" id="inside" aria-labelledby="product-title">
+    <div class="product__visual" data-book>
+      <img class="product__page product__page--a" src="{{ asset('images/pages/index-760.webp') }}" alt="{{ c.product.preview_alts[0] }}" width="760" height="1074" loading="lazy" decoding="async">
+      <img class="product__page product__page--b" src="{{ asset('images/pages/letter-01-760.webp') }}" alt="{{ c.product.preview_alts[1] }}" width="760" height="1074" loading="lazy" decoding="async">
+      <div class="book" data-book-tilt>
+        <div class="book__body">
+          <span class="book__back" aria-hidden="true"></span>
+          <span class="book__spine" aria-hidden="true"></span>
+          <span class="book__edge" aria-hidden="true"></span>
+          <img class="book__cover"
+               src="{{ asset('images/pages/cover-760.webp') }}"
+               srcset="{{ asset('images/pages/cover-420.webp') }} 420w, {{ asset('images/pages/cover-760.webp') }} 760w"
+               sizes="(max-width: 700px) 60vw, 340px"
+               alt="{{ c.product.mockup_alt }}" width="760" height="1074" loading="lazy" decoding="async">
+        </div>
+      </div>
+      <span class="book__shadow" aria-hidden="true"></span>
+    </div>
+
+    <div class="product__info">
+      <h2 id="product-title" class="product__title">{{ c.product.title }}</h2>
+      <p class="product__subtitle">{{ c.product.subtitle }}</p>
+      <p class="product__body">{{ c.product.body }}</p>
+      <dl class="facts">
+        {%- for f in c.product.facts %}
+        <div class="facts__row"><dt>{{ f.term }}</dt><dd>{{ f.detail }}</dd></div>
+        {%- endfor %}
+      </dl>
+      <a class="btn btn--primary" href="{{ checkout_url }}" data-checkout data-cta="product">{{ c.product.cta }}</a>
+      <p class="fine">{{ c.product.cta_note }}</p>
+    </div>
+
+    <div class="contents">
+      <div class="contents__head">
+        <h3 class="contents__title">{{ c.product.contents_title }}</h3>
+        <p class="contents__lede">{{ c.product.contents_lede }}</p>
+      </div>
+      <ol class="contents__list">
+        {%- for l in c.letters %}
+        <li>
+          <button type="button" class="contents__item" data-letter="{{ l.n }}" aria-haspopup="dialog">
+            <span class="contents__name">{{ l.n }}. {{ l.title }}</span>
+            <span class="contents__page"><span class="visually-hidden">{{ c.product.page_label }} </span>{{ l.page }}</span>
+          </button>
+        </li>
+        {%- endfor %}
+      </ol>
+    </div>
+  </section>
+
+  {# ================= EMOTIONAL VALUE ================= #}
+  <section class="value" aria-labelledby="value-title">
+    <figure class="value__art">
+      <img src="{{ asset('images/pages/cover-painting-900.webp') }}"
+           srcset="{{ asset('images/pages/cover-painting-900.webp') }} 900w, {{ asset('images/pages/cover-painting-1600.webp') }} 1600w"
+           sizes="(max-width: 900px) 100vw, 46vw"
+           alt="{{ c.value.img_alt }}" width="1600" height="1204" loading="lazy" decoding="async">
+    </figure>
+    <div class="value__text">
+      <h2 id="value-title" class="section-title">{{ c.value.title }}</h2>
+      <p class="section-lede">{{ c.value.lede }}</p>
+      <p class="value__list-label">{{ c.value.list_label }}…</p>
+      <ul class="value__list">
+        {%- for m in c.value.moments %}<li>{{ m }}</li>{% endfor -%}
+      </ul>
+      <div class="value__pair">
+        <div><h3>{{ c.value.give_title }}</h3><p>{{ c.value.give_body }}</p></div>
+        <div><h3>{{ c.value.keep_title }}</h3><p>{{ c.value.keep_body }}</p></div>
+      </div>
+    </div>
+  </section>
+
+  {# ================= FAITH ================= #}
+  <section class="faith" id="faith" aria-labelledby="faith-title">
+    <div class="faith__panel">
+      <p class="smallcaps">{{ c.faith.label }}</p>
+      <h2 id="faith-title" class="faith__title">{{ c.faith.title }}</h2>
+      <p class="faith__body">{{ c.faith.body }}</p>
+      <blockquote class="faith__prayer">
+        {%- for p in c.faith.prayer %}<p>{{ p }}</p>{% endfor -%}
+        <p class="faith__amen">{{ c.faith.amen }}</p>
+      </blockquote>
+    </div>
+    <aside class="faith__side">
+      <img src="{{ asset('images/illustrations/l16.webp') }}" alt="{{ c.faith.img_alt }}" width="320" height="172" loading="lazy" decoding="async">
+      <blockquote class="faith__quote">
+        <p>{{ c.faith.quote }}</p>
+        <cite>{{ c.faith.quote_source }}</cite>
+      </blockquote>
+    </aside>
+  </section>
+
+  {# ================= TESTIMONIALS (only rendered when real ones exist in content/*.json) ================= #}
+  {% if c.testimonials["items"] %}
+  <section class="testimonials" aria-labelledby="testimonials-title">
+    <h2 id="testimonials-title" class="section-title">{{ c.testimonials.title }}</h2>
+    <ul class="testimonials__list">
+      {%- for t in c.testimonials["items"] %}
+      <li><blockquote><p>{{ t.quote }}</p><cite>{{ t.name }}{% if t.context %}, {{ t.context }}{% endif %}</cite></blockquote></li>
+      {%- endfor %}
+    </ul>
+  </section>
+  {% endif %}
+
+  {# ================= FINAL CTA ================= #}
+  <section class="final" id="get" aria-labelledby="final-title" data-final>
+    <div class="final__scene">
+      {{ avatar_scene('av-final', prop='letter', label=c.final.scene_label) }}
+    </div>
+    <h2 id="final-title" class="final__title">{{ c.final.title }}</h2>
+    <p class="final__lede">{{ c.final.lede }}</p>
+    <p class="final__remember">{{ c.final.remember }}</p>
+    <a class="btn btn--primary btn--large" href="{{ checkout_url }}" data-checkout data-cta="final">{{ c.final.cta }}</a>
+    <p class="fine">{{ c.final.cta_note }}</p>
+  </section>
+</main>
+
+{# ================= FOOTER ================= #}
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <div>
+      <p class="site-footer__mark">For You</p>
+      <p class="site-footer__tagline">{{ c.footer.tagline }}</p>
+    </div>
+    <p class="site-footer__note">{{ c.footer.note }}</p>
+    <div class="site-footer__meta">
+      <p>{{ c.footer.language }} <a href="/{{ other_lang }}" hreflang="{{ other_lang }}" lang="{{ other_lang }}" data-lang-link="{{ other_lang }}">{{ other_c.language_name }}</a></p>
+      <p>&copy; <span data-year>2026</span> For You. {{ c.footer.rights }}</p>
+    </div>
+  </div>
+</footer>
+
+{# ================= MOBILE STICKY CTA ================= #}
+<div class="sticky-cta" data-sticky aria-hidden="true">
+  <p>{{ c.sticky.text }}</p>
+  <a class="btn btn--primary btn--small" href="{{ checkout_url }}" data-checkout data-cta="sticky" tabindex="-1">{{ c.sticky.cta }}</a>
+</div>
+
+{# ================= LETTER DIALOG ================= #}
+<dialog class="letter-dialog" id="letter-dialog" aria-labelledby="dialog-title" data-dialog>
+  <div class="letter-dialog__sheet paper">
+    <button type="button" class="icon-btn letter-dialog__close" data-dialog-close aria-label="{{ c.ui.close }}">
+      <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+    </button>
+    <img class="letter-dialog__img" data-d-img src="" alt="" width="240" height="200">
+    <p class="paper__no" data-d-no></p>
+    <h3 id="dialog-title" class="paper__title" data-d-title></h3>
+    <p class="paper__epigraph" data-d-epigraph></p>
+    <div class="aside-note">
+      <p class="smallcaps" data-d-label></p>
+      <p class="aside-note__quote" data-d-quote></p>
+    </div>
+    <p class="paper__closing" data-d-closing></p>
+    <p class="letter-dialog__glimpse">{{ c.ui.glimpse }}</p>
+    <div class="letter-dialog__actions">
+      <a class="btn btn--primary" href="{{ checkout_url }}" data-checkout data-cta="dialog">{{ c.ui.cta }}</a>
+      <div class="letter-dialog__nav">
+        <button type="button" class="icon-btn" data-dialog-prev aria-label="{{ c.ui.prev }}">
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M15 5l-7 7 7 7" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <button type="button" class="icon-btn" data-dialog-next aria-label="{{ c.ui.next }}">
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M9 5l7 7-7 7" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</dialog>
+
+<script id="site-data" type="application/json">{{ payload | tojson }}</script>
+<script type="module" src="{{ asset('js/main.js') }}"></script>
+{% endblock %}

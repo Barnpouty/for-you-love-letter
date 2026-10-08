@@ -1,0 +1,145 @@
+/* ==========================================================================
+   Avatar pose system
+   Each limb/head is a <g> with a fixed pivot (viewBox units). Poses are
+   classes on the <svg>: pose-wave · pose-offer · pose-comfort · pose-embrace
+   pose-uplift · pose-joy · pose-calm · pose-reading, plus modifiers
+   is-pointing and is-walking. All motion is transform/opacity (GPU-friendly).
+   ========================================================================== */
+
+.avatars { display: block; width: 100%; height: auto; overflow: visible; }
+.avatars g, .avatars path, .avatars circle, .avatars ellipse, .avatars image { transform-box: view-box; }
+
+/* --- pivots --- */
+.avatars .g-giver, .avatars .g-recv { transition: transform 1.25s var(--ease, ease); }
+.avatars .gh  { transform-origin: 210px 246px; }
+.avatars .rh  { transform-origin: 390px 246px; }
+.avatars .ga-l { transform-origin: 171px 272px; }
+.avatars .ga-r { transform-origin: 249px 272px; }
+.avatars .ra-l { transform-origin: 356px 272px; }
+.avatars .ra-r { transform-origin: 424px 272px; }
+.avatars .g-leg1 { transform-origin: 197px 392px; }
+.avatars .g-leg2 { transform-origin: 223px 392px; }
+.avatars .r-leg1 { transform-origin: 379px 440px; }
+.avatars .r-leg2 { transform-origin: 401px 440px; }
+.avatars .g-torso { transform-origin: 210px 405px; }
+.avatars .r-torso { transform-origin: 390px 452px; }
+
+.avatars .gh, .avatars .rh,
+.avatars .ga-l, .avatars .ga-r, .avatars .ra-l, .avatars .ra-r { transition: transform .95s var(--ease-soft, ease); }
+
+/* --- quiet idle life: breathing and the occasional blink --- */
+.avatars .g-torso { animation: av-breathe 5.8s ease-in-out infinite; }
+.avatars .r-torso { animation: av-breathe 6.4s ease-in-out -2.1s infinite; }
+.avatars .av-eyes { transform-box: fill-box; transform-origin: center; animation: av-blink 6.5s infinite; }
+.avatars .g-recv .av-eyes { animation-delay: -2.7s; animation-duration: 7.3s; }
+.avatars .av-gaze { transform: translate(var(--gx, 0px), var(--gy, 0px)); transition: transform .35s var(--ease, ease); }
+.avatars .av-eyes, .avatars .av-eyes-closed, .avatars .av-mouth, .avatars .av-mouth-joy { transition: opacity .35s; }
+.avatars .av-eyes-closed, .avatars .av-mouth-joy { opacity: 0; }
+.avatars .r-prop { opacity: 0; transition: opacity .4s .35s; }
+.avatars .g-prop { transition: opacity .4s; }
+
+@keyframes av-breathe { 0%, 100% { transform: scaleY(1); } 50% { transform: scaleY(1.012); } }
+@keyframes av-blink { 0%, 93%, 100% { transform: scaleY(1); } 95.5% { transform: scaleY(.08); } }
+
+/* --- shared expression helpers --- */
+.avatars.pose-comfort .g-recv .av-eyes,
+.avatars.pose-embrace .av-eyes,
+.avatars.pose-calm .av-eyes { opacity: 0; }
+.avatars.pose-comfort .g-recv .av-eyes-closed,
+.avatars.pose-embrace .av-eyes-closed,
+.avatars.pose-calm .av-eyes-closed { opacity: 1; }
+.avatars.pose-joy .av-mouth, .avatars.pose-embrace .av-mouth, .avatars.pose-wave .g-giver .av-mouth { opacity: 0; }
+.avatars.pose-joy .av-mouth-joy, .avatars.pose-embrace .av-mouth-joy, .avatars.pose-wave .g-giver .av-mouth-joy { opacity: 1; }
+
+/* --- wave: a hello on arrival --- */
+.avatars.pose-wave .ga-l { animation: av-wave 1.9s var(--ease-soft, ease) 1 both; }
+@keyframes av-wave {
+  0% { transform: rotate(0); }
+  22% { transform: rotate(160deg); }
+  38% { transform: rotate(142deg); }
+  54% { transform: rotate(164deg); }
+  70% { transform: rotate(144deg); }
+  86% { transform: rotate(158deg); }
+  100% { transform: rotate(0); }
+}
+.avatars.pose-wave .gh { transform: rotate(-4deg); }
+.avatars.pose-wave .rh { transform: rotate(-3deg); }
+
+/* --- offer: the writer holds out the letters, the other reaches --- */
+.avatars.pose-offer .g-giver { transform: translateX(12px); }
+.avatars.pose-offer .g-recv { transform: translateX(-10px); }
+.avatars.pose-offer .ga-r { transform: rotate(-56deg); }
+.avatars.pose-offer .ra-l { transform: rotate(38deg); }
+.avatars.pose-offer .gh { transform: rotate(5deg); }
+.avatars.pose-offer .rh { transform: rotate(-5deg); }
+
+/* --- reading: the letter has changed hands --- */
+.avatars.pose-reading .g-giver { transform: translateX(22px); }
+.avatars.pose-reading .g-recv { transform: translateX(-14px); }
+.avatars.pose-reading .ra-l { transform: rotate(26deg); }
+.avatars.pose-reading .r-prop { opacity: 1; }
+.avatars.pose-reading .g-prop { opacity: 0; }
+.avatars.pose-reading .rh { transform: rotate(-6deg) translateY(2px); }
+.avatars.pose-reading .gh { transform: rotate(7deg); }
+.avatars.pose-reading .ga-r { transform: rotate(-64deg); }
+
+/* --- comfort: lean in, a hand on the shoulder --- */
+.avatars.pose-comfort .g-giver { transform: translateX(30px); }
+.avatars.pose-comfort .ga-r { transform: rotate(-70deg); }
+.avatars.pose-comfort .g-prop { opacity: 0; }
+.avatars.pose-comfort .gh { transform: rotate(8deg) translateY(2px); }
+.avatars.pose-comfort .rh { transform: rotate(-8deg) translateY(4px); }
+
+/* --- embrace: close together, eyes closed --- */
+.avatars.pose-embrace .g-giver { transform: translateX(42px); }
+.avatars.pose-embrace .g-recv { transform: translateX(-40px); }
+.avatars.pose-embrace .ga-r { transform: rotate(-72deg); }
+.avatars.pose-embrace .ra-l { transform: rotate(70deg); }
+.avatars.pose-embrace .g-prop { opacity: 0; }
+.avatars.pose-embrace .gh { transform: rotate(9deg); }
+.avatars.pose-embrace .rh { transform: rotate(-9deg); }
+
+/* --- uplift: side by side, looking up --- */
+.avatars.pose-uplift { --gy: -2.6px; }
+.avatars.pose-uplift .g-giver { transform: translateX(20px); }
+.avatars.pose-uplift .g-recv { transform: translateX(-16px); }
+.avatars.pose-uplift .ga-r { transform: rotate(-64deg); }
+.avatars.pose-uplift .g-prop { opacity: 0; }
+.avatars.pose-uplift .gh { transform: rotate(-3deg) translateY(-2px); }
+.avatars.pose-uplift .rh { transform: rotate(3deg) translateY(-3px); }
+
+/* --- joy: a small lift and wide smiles --- */
+.avatars.pose-joy .g-giver { transform: translateX(22px); }
+.avatars.pose-joy .g-recv { transform: translateX(-20px); }
+.avatars.pose-joy .r-hop { animation: av-hop .9s var(--ease, ease) .25s 1 both; }
+.avatars.pose-joy .ga-l { animation: av-wave 1.9s var(--ease-soft, ease) .1s 1 both; }
+.avatars.pose-joy .ra-r { transform: rotate(-30deg); }
+.avatars.pose-joy .gh { transform: rotate(6deg); }
+.avatars.pose-joy .rh { transform: rotate(-6deg); }
+@keyframes av-hop { 0%, 100% { transform: translateY(0); } 40% { transform: translateY(-12px); } 70% { transform: translateY(2px); } }
+
+/* --- calm: night, leaning together --- */
+.avatars.pose-calm .g-giver { transform: translateX(36px); }
+.avatars.pose-calm .g-recv { transform: translateX(-34px); }
+.avatars.pose-calm .ga-r { transform: rotate(-70deg); }
+.avatars.pose-calm .g-prop { opacity: 0; }
+.avatars.pose-calm .gh { transform: rotate(12deg) translateY(3px); }
+.avatars.pose-calm .rh { transform: rotate(-12deg) translateY(4px); }
+
+/* --- modifiers --- */
+.avatars.is-pointing .ga-l { transform: rotate(68deg); }
+.avatars.is-walking .g-leg1, .avatars.is-walking .r-leg2 { animation: av-step .55s ease-in-out infinite alternate; }
+.avatars.is-walking .g-leg2, .avatars.is-walking .r-leg1 { animation: av-step .55s ease-in-out -.55s infinite alternate; }
+.avatars.is-walking .g-giver, .avatars.is-walking .g-recv { transition-duration: 1.7s; transition-timing-function: cubic-bezier(.45,.1,.35,1); }
+@keyframes av-step { from { transform: rotate(-9deg); } to { transform: rotate(9deg); } }
+
+/* the final scene starts apart, then they walk together */
+.avatars.is-apart .g-giver { transform: translateX(-70px); }
+.avatars.is-apart .g-recv { transform: translateX(70px); }
+
+/* night atmosphere: soften the ground shadows */
+.moments[data-atmosphere="night"] .av-shadow { opacity: .3; }
+
+@media (prefers-reduced-motion: reduce) {
+  .avatars .g-torso, .avatars .r-torso, .avatars .av-eyes { animation: none !important; }
+}
